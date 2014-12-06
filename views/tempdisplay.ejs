@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+#header {
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding:5px;
+}
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:150px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+</style>
+
+<head>
+	<title>CS 355 Airlines</title>
+</head>
+
+
+
+<body>
+
+<div id="header">
+CS355 Airline
+</div>
+
+
+<div id="nav">
+About<br>
+Search Flights<br>
+View Fleet<br>
+Locations Serviced<br>
+</div>
+
+
+<div id="section">
+<h1>Unbooked Flights</h1>
+	<table>
+	<tr>
+	<th>Flight Number</th>
+	<th>Departure</th>
+	<th>Arrival</th>
+	<tr>
+	<% for (var i=0; rs.length > i; i++) { %>
+<div id="footer">
+	Copyright © CS355 Airlines
+</div>
+</body>
+</html>

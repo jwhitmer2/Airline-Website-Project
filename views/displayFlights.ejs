@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+#header {
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding:5px;
+}
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:150px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+</style>
+
+<head>
+	<title>CS 355 Airlines</title>
+</head>
+
+
+
+<body>
+
+<div id="header">
+CS355 Airline
+</div>
+
+
+<div id="nav">
+<a href="/">About</a><br>
+<a href="/flight/all">Search Flights</a><br>
+<a href="/planes/select">View Fleet</a><br>
+<a href="/locations/all">Locations Serviced</a><br>
+<a href="/passengers/new">Add Passenger</a><br>
+<a href="/passengers/all">Edit Passenger</a><br>
+</div>
+
+
+<div id="section">
+<h1>Flights</h1>
+<% if (rs.length > 0) { %>
+	<table>
+	<tr>
+	<th>Flight Number</th>
+	<th>Departure</th>
+	<th>Arrival</th>
+	</tr>
+	<% for (var i =0; rs.length > i; i++) { %>
+		<tr>
+			<td> <%= rs[i].FlightNo %></td>
+			<td> <%= rs[i].Departure %></td>
+			<td> <%= rs[i].Arrival %></td>
+		</tr>
+	<% } %>
+	</table>
+<% } else { %>
+There are no flights leaving this airport at this time.
+<% } %>
+
+
+</div>
+<div id="footer">
+	Copyright © CS355 Airlines
+</div>
+</body>
+</html>
