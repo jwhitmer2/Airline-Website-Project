@@ -1,1 +1,1 @@
-# A Node.js project containing a website for a fictional airline company to carry out their day to day business with by interacting with their database.
+# A Node.js project containing a website for a fictional airline company to carry out their simple day to day tasks with by interacting with their database. This project uses a model-view-controller framework. The model folder contains the database interactions that are called by the JavaScript functions found in the controller folder. The results are displayed with modified HTML in the view folder.
